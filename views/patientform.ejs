@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Patient form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="border p-3 m-4 row" method="post" action="/addpatients">
+        <h4 class="text-primary">Patients Registration Form</h4>
+        <div class="mb-3 col w-50">
+          <label for="patientsTelephone" class="form-label">Telephone</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="patientsTelephone"
+            name="patientsTelephone"
+          />
+        </div>
+        <div class="mb-3 col w-50">
+          <label for="patientsName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="patientsName"
+            name="patientsName"
+          />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col w-50">
+            <label for="patientsDateOfBirth" class="form-label"
+              >Date of Birth</label
+            >
+            <input
+              type="date"
+              name="patientsDateOfBirth"
+              id="patientsDateOfBirth"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3 col w-50">
+            <label for="patientsIdNumber" class="form-label">ID Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="patientsIdNumber"
+              name="patientsIdNumber"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-3 col w-50">
+          <label for="patientsAddress" class="form-label">Address</label>
+          <input
+            type="text"
+            class="form-control"
+            id="patientsAddress"
+            name="patientsAddress"
+          />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col w-50">
+            <label for="patientsCounty" class="form-label">County</label>
+            <input
+              type="text"
+              class="form-control"
+              id="patientsCounty"
+              name="patientsCounty"
+            />
+          </div>
+          <div class="mb-3 col w-50">
+            <label for="patientsSubCounty" class="form-label">Sub County</label
+            ><input
+              type="text"
+              class="form-control"
+              id="patientsSubCounty"
+              name="patientsSubCounty"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3 w-50">
+          <label for="patientsEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="patientsEmail"
+            id="patientsEmail"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <label for="patientsGender" class="form-label">Gender</label>
+          <select
+            class="form-select m-3 col w-50"
+            aria-label="Default select example"
+            id="patientsGender"
+            name="patientsGender"
+          >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            <option value="Rather not say">Rather not say</option>
+          </select>
+          <label for="patientsMaritalStatus" class="form-label"
+            >Marital Status</label
+          >
+          <select
+            class="form-select m-3 col w-50"
+            aria-label="Default select example"
+            id="patientsMaritalStatus"
+            name="patientsMaritalStatus"
+          >
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Divorced">Divorced</option>
+          </select>
+        </div>
+
+        <h4 class="text-primary mt-3">Next of kin</h4>
+        <div class="mb-3">
+          <label for="kinsName" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="kinsName"
+            name="kinsName"
+          />
+        </div>
+
+        <div class="row">
+         <div class="mb-3 col w-50">
+            <label for="kinsDateOfBirth" class="form-label"
+              >Date of Birth</label
+            >
+            <input type="date" name="kinsDateOfBirth" id="kinsDateOfBirth" class="form-control">
+          </div>
+
+          <div class="mb-3 col w-50">
+            <label for="kinsIdNumber" class="form-label">ID Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="kinsIdNumber"
+              name="kinsIdNumber"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="kinsGender" class="form-label">Gender</label>
+          <select
+            class="form-select m-3 col w-50"
+            aria-label="Default select example"
+            id="kinsGender"
+            name="kinsGender"
+          >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            <option value="Rather not say">Rather not say</option>
+          </select>
+          <label for="kinsRelationship" class="form-label">Relationship</label>
+          <select
+            class="form-select m-3 col w-50"
+            aria-label="Default select example"
+            id="kinsRelationship"
+            name="kinsRelationship"
+          >
+            <option value="Father">Father</option>
+            <option value="Mother">Mother</option>
+            <option value="Sibling">Sibling</option>
+            <option value="Guardian">Guardian</option>
+            <option value="Cousin">Cousin</option>
+            <option value="Uncle">Uncle</option>
+            <option value="Aunt">Aunt</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="kinsTelephone" class="form-label"
+            >Telephone<input
+              type="tel"
+              name="kinsTelephone"
+              id="kinsTelephone"
+              class="form-control"
+          /></label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script src="/js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
