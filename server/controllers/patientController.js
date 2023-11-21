@@ -89,7 +89,7 @@ exports.addPatientsDetails = async (req, res) => {
 exports.getConfirmationPage = (req, res) => {
   res.render("confirmationpage");
 };
-/*send ref number*/
+/*send ref number to email*/
 exports.sendEmail = async (req, res) => {
   try {
     const [patient, patientNotCreated] = await Patient.findAll({
@@ -98,10 +98,6 @@ exports.sendEmail = async (req, res) => {
         patientsEmail: req.body.patientsEmail,
       },
     });
-    /* if (!patientNotCreated) {
-      res.status(404).json({ message: "Patient does not exist" });
-      return;
-    } */
 
     let pId = patient.patientId;
 
@@ -135,7 +131,6 @@ exports.sendEmail = async (req, res) => {
       }
     });
 
-    // res.status(200).json({message: "ok"});
   } catch (error) {
     console.error("An unexpected error occurred:", error);
   }
@@ -164,6 +159,7 @@ exports.addUser = async (req, res) => {
     });
     if (!userCreated) {
       res.status(400).json({ message: "User already exists." });
+      res.render('signup')
       return;
     }
 
